@@ -9,7 +9,7 @@ Solution: raspberry pi to the rescue
     -http://api.aladhan.com/
     ```python
     ts = int(time.time())
-    # adding one day to fix the offset of the api
+    # adding one day to fix the offset of the api because for timezone difference
     ts = ts +(24*60*60)
     response = requests.get("http://api.aladhan.com/v1/timings/"+str(ts)+"?latitude=37.3688&longitude=-122.0363&method=1&latitudeAdjustmentMethod=3")
     data = response.json()
